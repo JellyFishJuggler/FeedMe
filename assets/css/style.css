@@ -754,204 +754,54 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+.features-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature-heading h2 {
+  font-family: 'Kodchasan', sans-serif; /* Use the specified font */
+  margin: 0;
+  font-size: 32px;
+}
 
 .features {
-  text-align: center;
-  margin: 40px 0;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow boxes to wrap to the next line */
 }
 
 .feature-box {
-  background-color: #dcdcdc;
-  border-radius: 15px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
   padding: 20px;
-  margin: 20px 10px;
-  flex: 1;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 300px;
-  box-sizing: border-box;
-  transition: box-shadow 0.3s, transform 0.3s;
-  cursor: pointer;
-}
-
-.feature-box:hover {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.features h2 {
-  margin: 0;
-  position: relative;
-  display: inline-block;
-}
-
-.features h2::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 2px;
-  background-color: #333;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
+  min-height: 200px; /* Adjusted height */
+  text-align: left;
 }
 
 .feature-box h3 {
-  font-family: 'Kodchasan', sans-serif;
-  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .feature-box ul {
-  list-style-type: none;
   padding: 0;
+  margin: 10px 0 0 0;
 }
 
 .feature-box li {
-  margin-bottom: 10px;
+  list-style-type: disc;
+  margin-left: 20px;
 }
-
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-box {
-  color: #444444;
-  text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-  padding: 20px 0 30px 0;
-  background: #fff;
-}
 
-.contact .info-box i {
-  font-size: 32px;
-  color: #5846f9;
-  border-radius: 50%;
-  padding: 8px;
-}
-
-.contact .info-box h3 {
-  font-size: 20px;
-  color: #2c4964;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-.img-fluid-1 {
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
-  padding-left: 35%;
-  object-fit: cover;
-
-  .contact .info-box p {
-    padding: 0;
-    line-height: 24px;
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-
-  .contact .php-email-form {
-    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-    padding: 30px;
-    background: #fff;
-  }
-
-  .contact .php-email-form .error-message {
-    display: none;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: left;
-    padding: 15px;
-    font-weight: 600;
-  }
-
-  .contact .php-email-form .error-message br+br {
-    margin-top: 25px;
-  }
-
-  .contact .php-email-form .sent-message {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-  }
-
-  .contact .php-email-form .loading {
-    display: none;
-    background: #fff;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .contact .php-email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #18d26e;
-    border-top-color: #eee;
-    -webkit-animation: animate-loading 1s linear infinite;
-    animation: animate-loading 1s linear infinite;
-  }
-
-  .contact .php-email-form input,
-  .contact .php-email-form textarea {
-    border-radius: 5px;
-    box-shadow: none;
-    font-size: 14px;
-  }
-
-  .contact .php-email-form input:focus,
-  .contact .php-email-form textarea:focus {
-    border-color: #5846f9;
-  }
-
-  .contact .php-email-form input {
-    padding: 10px 15px;
-  }
-
-  .contact .php-email-form textarea {
-    padding: 12px 15px;
-  }
-
-  .contact .php-email-form button[type=submit] {
-    background: #5846f9;
-    border: 0;
-    padding: 10px 24px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 5px;
-  }
-
-  .contact .php-email-form button[type=submit]:hover {
-    background: #7b27d8;
-  }
-
-  @-webkit-keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 
   /*--------------------------------------------------------------
 # Breadcrumbs

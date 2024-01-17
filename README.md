@@ -24,11 +24,9 @@ FeedMe is a web-based platform aimed at addressing hunger by incentivizing food 
 
 
 ## Usage
-[Include usage examples and screenshots]
+Will be added soon.
 
 
-## Acknowledgments
-[Credit any third-party libraries, resources, or inspirations]
 
 
 **Made by Srijan, Kaniskh, Keshav of college BPIT**

@@ -1,8 +1,6 @@
 # FeedMe - Food Donation Platform
 
-# Nourish & Earn - Food Donation Platform
-
-Nourish & Earn is a web-based platform aimed at addressing hunger by incentivizing food donations through a points-based system. Users can earn points for donating surplus food, climb the leaderboard, and receive special rewards. The platform also includes a community forum to foster engagement and collaboration.
+FeedMe is a web-based platform aimed at addressing hunger by incentivizing food donations through a points-based system. Users can earn points for donating surplus food, climb the leaderboard, and receive special rewards. The platform also includes a community forum to foster engagement and collaboration.
 
 ## Features
 

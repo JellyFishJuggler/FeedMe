@@ -813,7 +813,7 @@ section {
 # Contact
 --------------------------------------------------------------*/
 #contacts {
-  background-color: #171717;
+  background-color: #212121;
   padding: 80px 0;
 }
 
@@ -823,39 +823,42 @@ section {
 }
 
 .section-title h2 {
-  color: #ffffff;
+  color: #fff;
   font-family: 'Kodchasan', sans-serif;
   font-size: 32px;
   font-weight: bold;
 }
 
 .contact-box {
-  background-color: #fff;
+  background-color: #111111;
   padding: 30px;
   text-align: center;
   margin-bottom: 30px;
+  color: #fff;
+  border-radius: 10px;
 }
 
 .contact-box h3 {
-  color: #191a1a;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.contact-box h2{
-  color: #000000;
-}
 .contact-box p {
   font-size: 18px;
   margin-bottom: 0;
 }
 
-.map-box {
-  background-color: #fff;
+.embed-map-display {
+  width: 100%;
   height: 400px;
-  /* Adjust the height as needed */
   margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.embed-map-display iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .contact-entry-box {

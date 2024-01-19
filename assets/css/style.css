@@ -1,37 +1,17 @@
 /*--------------------------------------------------------------
 # DialogFlow Chat-Bot
 --------------------------------------------------------------*/
-
-.red-box-container {
-  
+.chat-bot {
   position: fixed;
-  bottom: 20px;
   right: 20px;
-  z-index: 9998; /* Adjust the z-index value to make sure it's above other elements on the page */
-}
-
-.red-box {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  cursor: pointer;
-}
-
-.chat-dropdown {
-  position: fixed;
   bottom: 20px;
-  right: 20px;
-  z-index: 9999; /* Adjust the z-index value to make sure it's above other elements on the page */
-  display: none;
+  border: none;
+  z-index: 1000; 
 }
-
-.chat-dropdown.open {
-  display: block;
-}
-
-.chat-dropdown iframe {
-  width: 350px;
-  height: 430px;
+.chatbot-container {
+  margin: 0 auto;
+  max-width: 1200px; /* or any other value */
+  padding: 0 20px; /* adding 20px of padding */
 }
 /*--------------------------------------------------------------
 # General

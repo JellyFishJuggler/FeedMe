@@ -268,22 +268,13 @@
         <li>Location</li>
     </div>
 
+    <div class="chatbot-container">
+        <div class="chat-bot">
+            <iframe width="350" height="430" allow="microphone;"
+            src="https://console.dialogflow.com/api-client/demo/embedded/7bfa7db5-fde6-4537-bf4d-84b793837452"></iframe>
+        </div>
+    </div>
 
-    <div class="red-box-container">
-        <div class="red-box" onclick="toggleChat()"></div>
-      </div>
-    
-      <div class="chat-dropdown" id="chatDropdown">
-        <!-- Your existing chat-bot iframe goes here -->
-        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/7bfa7db5-fde6-4537-bf4d-84b793837452"></iframe>
-      </div>
-
-      <script>
-        function toggleChat() {
-          var chatDropdown = document.getElementById('chatDropdown');
-          chatDropdown.classList.toggle('open');
-        }
-      </script>
 </body>
 
 

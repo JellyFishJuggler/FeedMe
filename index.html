@@ -1,287 +1,332 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <title>FeedMe</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
     <!-- Google Fonts -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@600&display=swap" rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-
+    <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
+    <div class="chatbot-container">
+        <svg fill="#000000" viewBox="0 0 24 24" id="conversation-alt" data-name="Flat Line"
+            xmlns="http://www.w3.org/2000/svg" class="icon flat-line">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path id="secondary" d="M17,4v8a1,1,0,0,1-1,1H7L3,17V4A1,1,0,0,1,4,3H16A1,1,0,0,1,17,4Z"
+                    style="fill: #ff795a; stroke-width: 2"></path>
+                <path id="primary" d="M8,17h9l4,4V7a1,1,0,0,0-1-1H17" style="
+              fill: none;
+              stroke: #000000;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 2;
+            "></path>
+                <path id="primary-2" data-name="primary"
+                    d="M17,4v8a1,1,0,0,1-1,1H7L3,17V4A1,1,0,0,1,4,3H16A1,1,0,0,1,17,4Z" style="
+              fill: none;
+              stroke: #000000;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 2;
+            "></path>
+            </g>
+        </svg>
+    </div>
+
+    <iframe id="chatbot-iframe" allow="microphone;"
+        src="https://console.dialogflow.com/api-client/demo/embedded/708acfbd-6caa-4183-a564-2dcac08a97d2"></iframe>
+
+    <script>
+        var chatbotContainer = document.querySelector('.chatbot-container');
+        var chatbotIframe = document.getElementById('chatbot-iframe');
+
+        function toggleChatbot() {
+            chatbotIframe.style.display = (chatbotIframe.style.display === 'none') ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', function (event) {
+            if (event.target !== chatbotContainer && !chatbotContainer.contains(event.target) && event.target !== chatbotIframe) {
+                chatbotIframe.style.display = 'none';
+            }
+        });
+    </script>
 
 
 
-
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
-
-            <h1 class="logo"><a href="index.html">FeedMe</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Features</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="register.html">Register</a></li>
-
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-
-        </div>
-    </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
+    <div class="background"></div>
     <section id="hero" class="d-flex align-items-center justify-content-center">
+        <header id="header">
+            <div class="container d-flex align-items-center justify-content-between">
+                <h1 class="logo"><a href="index.html">FeedMe</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                        <li><a class="nav-link scrollto" href="#about">About</a></li>
+                        <li>
+                            <a class="nav-link scrollto" href="#services">Features</a>
+                        </li>
+                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        <li>
+                            <a class="getstarted scrollto" href="register.html">Register</a>
+                        </li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+            </div>
+        </header>
         <div class="container-fluid aos-init aos-animate" data-aos="fade-up">
-
             <div class="row justify-content-center">
-
-                <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                <div
+                    class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                     <h1>Join us in the fight against hunger.</h1>
-                    <h2>We're a team dedicated to making a positive impact and helping those in need.</h2>
-                
+                    <h2>
+                        We're a team dedicated to making a positive impact and helping
+                        those in need.
+                    </h2>
 
                     <div>
                         <!-- Updated button with onclick event -->
-                        <button class="btn-get-started scrollto" onclick="openCustomForm()">Get Started</button>
+                        <button class="btn-get-started scrollto" onclick="openCustomForm()">
+                            Get Started
+                        </button>
                     </div>
                 </div>
-                
+
                 <script>
                     function openCustomForm() {
-                        
-                        var customFormLink = 'https://l1nk.dev/feedme-donation-form';
-                        window.open(customFormLink, '_blank');
+                        var customFormLink = "https://l1nk.dev/feedme-donation-form";
+                        window.open(customFormLink, "_blank");
                     }
                 </script>
 
-
                 <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-in"
                     data-aos-delay="150">
-                    <img src="assets/img/food-donate.jpg" class="img-fluid animated" alt="">
+                    <img src="assets/img/food-donate.jpg" class="img-fluid animated" alt="" />
                 </div>
             </div>
         </div>
-    </section><!-- End Hero -->
+    </section>
+    <!-- End Hero -->
 
     <main id="main">
-
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="zoom-out"
                         data-aos-delay="150">
-                        <img src="assets/img/about us.png" alt="">
+                        <img src="assets/img/about us.png" alt="" />
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content aos-init aos-animate"
                         data-aos="fade-right">
                         <h3>Get to Know Us</h3>
                         <p class="fst-italic">
-                            Join our cause to combat hunger! Your food donations can make a real difference. Visit our
-                            platform, specify the items you'd like to donate, and choose a convenient drop-off point.
-                            Every contribution counts.
+                            Join our cause to combat hunger! Your food donations can make a
+                            real difference. Visit our platform, specify the items you'd
+                            like to donate, and choose a convenient drop-off point. Every
+                            contribution counts.
                         </p>
                         <p class="fst-italic">
-                            Simplify the way you give back. Register, select the food items you can donate, and we'll
-                            ensure it reaches those in need. Your small effort can create a significant impact on
-                            someone's life. Let's fight hunger together!</p>
+                            Simplify the way you give back. Register, select the food items
+                            you can donate, and we'll ensure it reaches those in need. Your
+                            small effort can create a significant impact on someone's life.
+                            Let's fight hunger together!
+                        </p>
                         <div class="readmore">
                             <button>Read More</button>
                         </div>
                     </div>
-
-
                 </div>
-        </section><!-- End About Section -->
+            </div>
+        </section>
 
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts">
             <div class="container">
-
                 <div class="row counters">
                     <div class="row text-center">
                         <div class="col-lg-3 col-6 mx-auto">
                             <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
-                                class="purecounter">0</span>
+                                class="purecounter">
+                                0
+                            </span>
                             <p>Donations</p>
                         </div>
 
                         <div class="col-lg-3 col-6 mx-auto">
                             <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
-                                class="purecounter">0</span>
+                                class="purecounter">
+                                0
+                            </span>
                             <p>Happy Smiles</p>
                         </div>
 
                         <div class="col-lg-3 col-6 mx-auto">
                             <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
-                                class="purecounter">0</span>
+                                class="purecounter">
+                                0
+                            </span>
                             <p>Hours Of Support</p>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
-            <section id="goals" class="goals">
-                <div class="goal">
-                    <h2>Ready and Willing to Assist</h2>
-                    <hr>
-                    <p>Welcome to our donation website, where you can make a meaningful difference with just a few
-                        clicks. Our platform connects you with trusted and verified charities and causes, giving you the
-                        power to support the ones that align with your values and passions.</p>
-                    <img class="goal-img" src="assets/img/goals.png" alt="Description of the image">
+        </section>
+        <section id="goals" class="goals">
+            <div class="goal">
+                <h2>Ready and Willing to Assist</h2>
+                <hr />
+                <p>
+                    Welcome to our donation website, where you can make a meaningful
+                    difference with just a few clicks. Our platform connects you with
+                    trusted and verified charities and causes, giving you the power to
+                    support the ones that align with your values and passions.
+                </p>
+                <img class="goal-img" src="assets/img/goals.png" alt="Description of the image" />
+            </div>
+        </section>
+        <!--Features Section-->
+        <section class="features-container">
+            <div class="feature-heading">
+                <h2 style="font-family: &quot;Kodchasan&quot;, sans-serif">
+                    Features
+                </h2>
+            </div>
+            <hr class="line" />
+            <div class="features">
+                <!-- Feature 1 -->
+                <div class="feature-box">
+                    <h3>Leaderboard & Recognition</h3>
+                    <ul>
+                        <li>Showcase top donors locally and globally.</li>
+                        <li>Special coupons for the top 100 donors in a region.</li>
+                        <li>
+                            Introduce special badges for achieving milestones, adding a
+                            gamified element.
+                        </li>
+                        <li>
+                            Feature top donors with interviews, creating a personal
+                            connection.
+                        </li>
+                    </ul>
                 </div>
-            </section>
-            <!--Features Section-->
-            <section class="features-container">
-                <div class="feature-heading">
-                    <h2 style="font-family: 'Kodchasan', sans-serif;">Features</h2>
+
+                <!-- Feature 2 -->
+                <div class="feature-box">
+                    <h3>Rewards System</h3>
+                    <ul>
+                        <li>Earn points for donating surplus food.</li>
+                        <li>
+                            Invite top contributors to exclusive virtual events or webinars.
+                        </li>
+                        <li>
+                            Introduce challenges offering bonus points for increased
+                            engagement.
+                        </li>
+                        <li>Exclusive rewards and incentives for top donors.</li>
+                    </ul>
                 </div>
-                <hr class="line">
-                <div class="features">
-                    <!-- Feature 1 -->
-                    <div class="feature-box">
-                        <h3>Leaderboard & Recognition</h3>
-                        <ul>
-                            <li>Showcase top donors locally and globally.</li>
-                            <li>Special coupons for the top 100 donors in a region.</li>
-                            <li>Introduce special badges for achieving milestones, adding a gamified element.</li>
-                            <li>Feature top donors with interviews, creating a personal connection.</li>
-                        </ul>
-                    </div>
 
-                    <!-- Feature 2 -->
-                    <div class="feature-box">
-                        <h3>Rewards System</h3>
-                        <ul>
-                            <li>Earn points for donating surplus food.</li>
-                            <li>Invite top contributors to exclusive virtual events or webinars.</li>
-                            <li>Introduce challenges offering bonus points for increased engagement.</li>
-                            <li>Exclusive rewards and incentives for top donors.</li>
-                        </ul>
-                    </div>
+                <!-- Feature 3 -->
+                <div class="feature-box">
+                    <h3>Community Forum</h3>
+                    <ul>
+                        <li>Connect, share tips, and collaborate with others.</li>
+                        <li>Discuss experiences and ask questions.</li>
+                        <li>
+                            Expert Q&A Sessions: Host Q&A sessions with nutritionists,
+                            chefs, or experts.
+                        </li>
+                        <li>Introduce challenges for community-wide collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Contacts-->
 
-                    <!-- Feature 3 -->
-                    <div class="feature-box">
-                        <h3>Community Forum</h3>
-                        <ul>
-                            <li>Connect, share tips, and collaborate with others.</li>
-                            <li>Discuss experiences and ask questions.</li>
-                            <li>Expert Q&A Sessions: Host Q&A sessions with nutritionists, chefs, or experts.</li>
-                            <li>Introduce challenges for community-wide collaboration</li>
-                        </ul>
+        <section id="contacts">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="font-family: &quot;Kodchasan&quot;, sans-serif">
+                        Contact Us
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-box">
+                            <h3>Address</h3>
+                            <p>123 Main Street, Rohini, Bharat</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-box">
+                            <h3>Email</h3>
+                            <p>feedme@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-box">
+                            <h3>Contact</h3>
+                            <p>798465313</p>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <!--Contacts-->
-
-            <section id="contacts">
-                <div class="container">
-                    <div class="section-title">
-                        <h2 style="font-family: 'Kodchasan', sans-serif;">Contact Us</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="contact-box">
-                                <h3>Address</h3>
-                                <p>123 Main Street, Rohini, Bharat</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-box">
-                                <h3>Email</h3>
-                                <p>feedme@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-box">
-                                <h3>Contact</h3>
-                                <p>798465313</p>
-                            </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="embed-map-display">
+                            <iframe frameborder="0"
+                                src="https://www.google.com/maps/embed/v1/place?q=28.736855139517626,+77.11228035182928&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="embed-map-display">
-                                <iframe frameborder="0"
-                                    src="https://www.google.com/maps/embed/v1/place?q=28.736855139517626,+77.11228035182928&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
-                                </iframe>
+                    <div class="col-md-6">
+                        <form class="contact-box">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    placeholder="Enter your email address" />
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <form class="contact-box">
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                        placeholder="Enter your email address">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
-                                        placeholder="Subject">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea cols="30" id="message" class="form-control" name="message" rows="5"
-                                        placeholder="Message"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary full">Submit</button>
-                            </form>
-                        </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                                    placeholder="Subject" />
+                            </div>
+                            <div class="mb-3">
+                                <textarea cols="30" id="message" class="form-control" name="message" rows="5"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary full">
+                                Submit
+                            </button>
+                        </form>
                     </div>
-
                 </div>
-            </section>
-
-
-
-
-
+            </div>
+        </section>
     </main>
-
-
-
-    <div id="navbar" class="navbar">
-
-        <ul>
-            <li>FeedMe</li>
-        </ul>
-        <li>Location</li>
-    </div>
-
-    <div class="chatbot-container">
-        <div class="chat-bot">
-            <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/708acfbd-6caa-4183-a564-2dcac08a97d2"></iframe>
-        </div>
-    </div>
-
 </body>
-
 
 </html>

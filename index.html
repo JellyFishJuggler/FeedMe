@@ -51,26 +51,17 @@
             "></path>
             </g>
         </svg>
+
+        <iframe id="chatbot-iframe" allow="microphone;"
+            src="https://console.dialogflow.com/api-client/demo/embedded/708acfbd-6caa-4183-a564-2dcac08a97d2"></iframe>
+        <script>
+            var iframe = document.getElementById("chatbot-iframe");
+
+            document.querySelector('.chatbot-container').addEventListener('click', function() {
+                iframe.style.display = (iframe.style.display === "none" || iframe.style.display === "") ? "block" : "none";
+            });
+        </script>
     </div>
-
-    <iframe id="chatbot-iframe" allow="microphone;"
-        src="https://console.dialogflow.com/api-client/demo/embedded/708acfbd-6caa-4183-a564-2dcac08a97d2"></iframe>
-
-    <script>
-        var chatbotContainer = document.querySelector('.chatbot-container');
-        var chatbotIframe = document.getElementById('chatbot-iframe');
-
-        function toggleChatbot() {
-            chatbotIframe.style.display = (chatbotIframe.style.display === 'none') ? 'block' : 'none';
-        }
-
-        document.addEventListener('click', function (event) {
-            if (event.target !== chatbotContainer && !chatbotContainer.contains(event.target) && event.target !== chatbotIframe) {
-                chatbotIframe.style.display = 'none';
-            }
-        });
-    </script>
-
 
 
 

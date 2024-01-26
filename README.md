@@ -27,9 +27,9 @@ FeedMe is a web-based platform aimed at addressing hunger by incentivizing food 
 - **Local Meetups:** Encourage users to organize local meetups or volunteering events.
 - **Collaborative Challenges:** Introduce challenges for community-wide collaboration.
 - **Featured Success Stories:** Highlight and celebrate impactful stories within the community.
-
+<!-- 
 ## Video 
-<iframe src = "https://drive.google.com/file/d/14NS_m5i7jnkpQN9qh7K8lNWS0S2mSm0M/view?usp=drive_link" width="640" height="480"></iframe>
+<iframe src = "https://drive.google.com/file/d/14NS_m5i7jnkpQN9qh7K8lNWS0S2mSm0M/view?usp=drive_link" width="640" height="480"></iframe> -->
 
 ## Liked the work!
 Give the repository a star :)

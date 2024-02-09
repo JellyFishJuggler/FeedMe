@@ -33,6 +33,109 @@
 }
 
 #team {
-    background-image: url("/assets/img/hero-bg.jpg");
     height: 848px;
+    background: linear-gradient(45deg, rgba(240, 89, 65, 0.75) 0%, rgba(240, 89, 65, 0.75) 100%), url("../img/hero-bg.jpg") center center no-repeat;
+    filter: saturate(135%);
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+#team h2 {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+    padding-left: 15vh;
+}
+
+#team hr {
+    margin-left: 130px;
+    width: 500px;
+    height: 10px;
+    color: blueviolet;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#profile img {
+    margin-right: 10px;
+}
+
+#profile .srijan {
+    color: white;
+    text-align: center;
+}
+
+.srijan h3 {
+    text-decoration: solid;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.srijan h5 {
+    font-size: 25px;
+    color: #111111;
+}
+
+.silents {
+    padding-top: 50px;
+    display: flex;
+    background-color: #212121;
+    justify-content: space-around;
+    height: 600px;
+}
+
+.silent {
+    position: relative;
+    width: 25%;
+}
+
+.silent .IMG {
+    margin-top: 10%;
+    position: relative;
+    width: 100%;
+}
+
+.silent .IMG img {
+    width: 100%;
+    height: auto;
+}
+
+.silent .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* top: 0px; */
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.silent .text h3 {
+    font-size: 40px;
+    margin-top: 0;
+    padding-bottom: 40px;
+}
+
+.foot {
+    height: 100px;
+    background-color: #1A1A1A;
+    color: white;
+    text-align: center;
+}
+
+.foot h5 {
+    padding-top: 50px;
+    font-size: 20px;
 }

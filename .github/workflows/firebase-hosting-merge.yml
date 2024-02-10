@@ -14,7 +14,7 @@ jobs:
       - run: echo yay
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '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'
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SRIJAN_FEEDME }}'
           channelId: live
           projectId: srijan-feedme

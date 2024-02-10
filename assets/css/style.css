@@ -1363,3 +1363,34 @@ section {
     height: 24px;
     fill: #000;
 }
+
+
+/* Scroll Up */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.scroll-to-top.hidden {
+    display: none;
+}
+
+.scroll-to-top svg {
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover svg {
+    transform: translateY(-10px);
+}
+
+.bg-icon {
+    fill: #fff;
+}
+
+#arrow-icon {
+    fill: #000;
+    /* transform: rotate(180deg); */
+}

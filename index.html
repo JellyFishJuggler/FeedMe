@@ -11,7 +11,7 @@
 
     <!-- Google Fonts -->
 
-    <link rel="preconnect" href="https://fonts.gassets.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@600&display=swap" rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
@@ -24,8 +24,6 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <!-- firebase -->
-    <script src="assets/js/firebase.js" type="module"></script>
 </head>
 
 <body>
@@ -83,7 +81,7 @@
                             <a class="nav-link scrollto" href="#features">Features</a>
                         </li>
                         <li><a class="nav-link scrollto" href="#contacts">Contact</a></li>
-                        <li id="registerButton">
+                        <li>
                             <a class="getstarted scrollto" href="register.html">Register</a>
                         </li>
                     </ul>
@@ -106,12 +104,11 @@
                             Get Started
                         </button>
                     </div>
-
                 </div>
 
                 <script>
                     function openCustomForm() {
-                        var customFormLink = "https://forms.gle/ve3J2ayF1zSgJQys8";
+                        var customFormLink = "https://forms.gle/Bdw1yk9d2kAJA2p99";
                         window.open(customFormLink, "_blank");
                     }
                 </script>
@@ -133,17 +130,14 @@
                         <img src="assets/img/about us.png" alt="" />
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content aos-init aos-animate" data-aos="fade-right">
-                        <h3 style="font-size: 50px;">Get to Know Us</h3>
-                        <br>
+                        <h3>Get to Know Us</h3>
                         <p class="fst-italic">
                             Join our cause to combat hunger! Your food donations can make a real difference. Visit our platform, specify the items you'd like to donate, and choose a convenient drop-off point. Every contribution counts.
                         </p>
                         <p class="fst-italic">
                             Simplify the way you give back. Register, select the food items you can donate, and we'll ensure it reaches those in need. Your small effort can create a significant impact on someone's life. Let's fight hunger together!
                         </p>
-                        <!-- <div class="readmore">
-                            <button><a class="about-button" href="about.html">Read More</a></button>
-                        </div> -->
+
                         <button class="learn-more">
                             <span aria-hidden="true" class="circle">
                             <span class="icon arrow"></span>
@@ -188,24 +182,23 @@
             <div class="goal">
                 <h2>Ready and Willing to Assist</h2>
                 <hr />
-                <p style="font-family: 'Kodchasan', sans-serif;">
+                <p>
                     Welcome to our donation website, where you can make a meaningful difference with just a few clicks. Our platform connects you with trusted and verified charities and causes, giving you the power to support the ones that align with your values and passions.
                 </p>
-                <br>
                 <img class="goal-img" src="assets/img/goals.png" alt="Description of the image" />
             </div>
         </section>
         <!--Features Section-->
-        <section class="features-container" id="features">
-            <div class="section-title">
+        <section class="features-container">
+            <div class="feature-heading">
                 <h2 style="font-family: &quot;Kodchasan&quot;, sans-serif">
                     Features
                 </h2>
             </div>
-
+            <hr class="line" />
             <div class="features">
-
-                <div class="card" style="color: white;padding-top: 10px;">
+                <!-- Feature 1 -->
+                <div class="feature-box">
                     <h3>Leaderboard & Recognition</h3>
                     <ul>
                         <li>Showcase top donors locally and globally.</li>
@@ -218,7 +211,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="card" style="color: white;padding-top: 10px;">
+
+                <!-- Feature 2 -->
+                <div class="feature-box">
                     <h3>Rewards System</h3>
                     <ul>
                         <li>Earn points for donating surplus food.</li>
@@ -231,7 +226,9 @@
                         <li>Exclusive rewards and incentives for top donors.</li>
                     </ul>
                 </div>
-                <div class="card" style="color: white;padding-top: 10px;">
+
+                <!-- Feature 3 -->
+                <div class="feature-box">
                     <h3>Community Forum</h3>
                     <ul>
                         <li>Connect, share tips, and collaborate with others.</li>
@@ -290,23 +287,46 @@
                             <div class="mb-3">
                                 <textarea cols="30" id="message" class="form-control" name="message" rows="5" placeholder="Message"></textarea>
                             </div>
-                            <button type="submit" id="submit" class="btn btn-primary full">
+                            <button type="submit" class="btn btn-primary full">
                                 Submit
                             </button>
-                            <script src="assets/js/contact.js"></script>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <!--Scroll Up-->
-    <a href="#hero" class="scroll-to-top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448.2 234.5l-132.3-132.3c-9.4-9.4-24.6-9.4-33.9 0L105.2 375.9c-9.4 9.4-9.4 24.6 0 33.9L314.3 477.3c9.4 9.4 24.6 9.4 33.9 0l132.4-132.4z"/></svg>
-    </a>
+    <div class="scroll-to-top">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="bg-icon">
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" id="arrow-icon"/>
+        </svg>
+    </div>
+    <script>
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        const headElement = document.getElementById('head');
 
-    <script src="assets/js/auth.js" type="module"></script>
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry.isIntersecting) {
+                    scrollToTopBtn.classList.add('hidden');
+                } else {
+                    scrollToTopBtn.classList.remove('hidden');
+                }
+            }, {
+                threshold: 0.5
+            }
+        );
+
+        observer.observe(headElement);
+    </script>
 </body>
 
 </html>

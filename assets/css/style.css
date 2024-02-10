@@ -18,6 +18,118 @@
 /* } */
 
 
+/*Button*/
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    box-shadow: 0 0 5px 1px white;
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: rgba(255, 255, 255, 0.493);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+    box-shadow: 0 0 10px 2px white;
+}
+
+button:hover .button-text {
+    transform: translate(-1.7rem, 0);
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(8.7rem, 0);
+}
+
+button:active .circle .icon.arrow {
+    transform: translate(9.5rem, 0);
+    transition: all 0.3s;
+}
+
+button:active .circle {
+    transform: scale(0.9);
+    transition: all 0.3s;
+    box-shadow: 0 0 5px 0.5px white;
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
+button:active .button-text {
+    color: rgba(255, 255, 255, 0.459);
+}
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -476,21 +588,45 @@ h6 {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 28px;
+    padding: 15px 30px;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: 0.5s;
-    margin-top: 30px;
     color: #ffffff;
     /*font color*/
     border: 2px solid rgb(112, 26, 38);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 #hero .btn-get-started:hover {
     background: rgb(198, 49, 68, 1);
     color: #f2f2f3;
     filter: drop-shadow(0.8);
+}
+
+#hero .btn-get-started::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 0;
+    height: 100%;
+    background-color: rgb(112, 26, 38);
+    filter: blur(5px);
+    z-index: -1;
+    transition: width 0.9s ease-out, height 0.9s ease-out, background-color 0.3s ease-out;
+    border-radius: 30px 0 0 30px;
+}
+
+#hero .btn-get-started:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(198, 49, 68, 1);
+    border-radius: 30px;
+    transition: width 0.4s ease-out, height 0.4s ease-out, background-color 0.3s ease-out;
 }
 
 #hero .animated {
@@ -679,7 +815,7 @@ section {
 .about .content {
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 .about .content p:last-child {
@@ -757,6 +893,23 @@ section {
 # Features
 --------------------------------------------------------------*/
 
+
+/*Cards -> Features*/
+
+.card {
+    width: 320px;
+    height: 400px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.5), -15px -15px 30px rgba(60, 60, 60, 0.5);
+    transition: box-shadow 0.3s ease;
+    margin: 0px 25px;
+}
+
+.card:hover {
+    box-shadow: 20px 20px 60px rgba(25, 25, 25, 0.8), -20px -20px 60px rgba(60, 60, 60, 0.8);
+}
+
 .features-container {
     text-align: center;
     margin-bottom: 20px;
@@ -789,6 +942,11 @@ section {
     /* Adjusted height */
     text-align: left;
     box-shadow: 2px 0px 0px #111111;
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    box-shadow: 5px 0px 15px #111111;
 }
 
 .feature-box h3 {
@@ -797,6 +955,7 @@ section {
 }
 
 .feature-box ul {
+    list-style-type: none;
     padding: 0;
     margin: 10px 0 0 0;
 }
@@ -805,6 +964,37 @@ section {
     color: white;
     list-style-type: disc;
     margin-left: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Scroll UP SVG Icon
+--------------------------------------------------------------*/
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-10px);
+}
+
+.scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
 }
 
 
@@ -1137,11 +1327,14 @@ section {
 
 /* Chatbot */
 
-#conversation-alt {
+.chatbot-container {
     position: fixed;
-    /* top: 200px; */
     bottom: 20px;
     right: 20px;
+    z-index: 1;
+}
+
+#conversation-alt {
     width: 50px;
     height: 50px;
     padding: 10px;
@@ -1159,6 +1352,14 @@ section {
     width: 350px;
     height: 430px;
     border: none;
+    border-radius: 10px;
     box-shadow: 0px 45px 20px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    background-color: #584d4d;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: #000;
 }

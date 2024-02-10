@@ -80,9 +80,9 @@
                         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                         <li><a class="nav-link scrollto" href="#about">About</a></li>
                         <li>
-                            <a class="nav-link scrollto" href="#services">Features</a>
+                            <a class="nav-link scrollto" href="#features">Features</a>
                         </li>
-                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        <li><a class="nav-link scrollto" href="#contacts">Contact</a></li>
                         <li id="registerButton">
                             <a class="getstarted scrollto" href="register.html">Register</a>
                         </li>
@@ -106,6 +106,7 @@
                             Get Started
                         </button>
                     </div>
+
                 </div>
 
                 <script>
@@ -140,9 +141,15 @@
                         <p class="fst-italic">
                             Simplify the way you give back. Register, select the food items you can donate, and we'll ensure it reaches those in need. Your small effort can create a significant impact on someone's life. Let's fight hunger together!
                         </p>
-                        <div class="readmore">
+                        <!-- <div class="readmore">
                             <button><a class="about-button" href="about.html">Read More</a></button>
-                        </div>
+                        </div> -->
+                        <button class="learn-more">
+                            <span aria-hidden="true" class="circle">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text"><a href="about.html">Learn More</a></span>
+                          </button>
                     </div>
                 </div>
             </div>
@@ -189,16 +196,16 @@
             </div>
         </section>
         <!--Features Section-->
-        <section class="features-container">
-            <div class="feature-heading">
+        <section class="features-container" id="features">
+            <div class="section-title">
                 <h2 style="font-family: &quot;Kodchasan&quot;, sans-serif">
                     Features
                 </h2>
             </div>
-            <hr class="line" />
+
             <div class="features">
-                <!-- Feature 1 -->
-                <div class="feature-box">
+
+                <div class="card" style="color: white;padding-top: 10px;">
                     <h3>Leaderboard & Recognition</h3>
                     <ul>
                         <li>Showcase top donors locally and globally.</li>
@@ -211,9 +218,7 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="feature-box">
+                <div class="card" style="color: white;padding-top: 10px;">
                     <h3>Rewards System</h3>
                     <ul>
                         <li>Earn points for donating surplus food.</li>
@@ -226,9 +231,7 @@
                         <li>Exclusive rewards and incentives for top donors.</li>
                     </ul>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-box">
+                <div class="card" style="color: white;padding-top: 10px;">
                     <h3>Community Forum</h3>
                     <ul>
                         <li>Connect, share tips, and collaborate with others.</li>
@@ -297,6 +300,10 @@
             </div>
         </section>
     </main>
+    <!--Scroll Up-->
+    <a href="#hero" class="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448.2 234.5l-132.3-132.3c-9.4-9.4-24.6-9.4-33.9 0L105.2 375.9c-9.4 9.4-9.4 24.6 0 33.9L314.3 477.3c9.4 9.4 24.6 9.4 33.9 0l132.4-132.4z"/></svg>
+    </a>
 
     <script src="assets/js/auth.js" type="module"></script>
 

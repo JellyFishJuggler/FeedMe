@@ -19,7 +19,6 @@
 
 
 /*Button*/
-
 button {
     position: relative;
     display: inline-block;
@@ -32,6 +31,7 @@ button {
     padding: 0;
     font-size: inherit;
     font-family: inherit;
+    cursor: pointer;
 }
 
 button.learn-more {
@@ -995,6 +995,7 @@ section {
     width: 24px;
     height: 24px;
     fill: #333;
+    transform: rotate(-180deg);
 }
 
 
@@ -1378,14 +1379,6 @@ section {
     display: none;
 }
 
-.scroll-to-top svg {
-    transition: transform 0.3s ease;
-}
-
-.scroll-to-top:hover svg {
-    transform: translateY(-10px);
-}
-
 .bg-icon {
     fill: #fff;
 }
@@ -1393,4 +1386,8 @@ section {
 #arrow-icon {
     fill: #000;
     /* transform: rotate(180deg); */
+}
+
+.navbar li {
+    cursor: pointer;
 }
